@@ -693,6 +693,124 @@ section {
   z-index: 2;
 }
 
+/* ============== MENTOR THANKS ============== */
+.mentors {
+  background: linear-gradient(180deg, var(--bg-1) 0%, var(--bg-0) 100%);
+  overflow: hidden;
+}
+.mentors-bg {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(42% 34% at 22% 22%, rgba(94,228,213,0.10), transparent 70%),
+    radial-gradient(40% 38% at 78% 62%, rgba(139,124,255,0.12), transparent 72%),
+    linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.035) 50%, transparent 100%);
+}
+.mentors .container {
+  position: relative;
+}
+.mentors-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 34px;
+}
+.mentor-card {
+  position: relative;
+  min-height: 292px;
+  padding: 26px 22px 24px;
+  border: 1px solid var(--glass-stroke);
+  border-radius: 22px;
+  background:
+    linear-gradient(145deg, rgba(255,255,255,0.075), rgba(255,255,255,0.032)),
+    radial-gradient(circle at 50% 0%, rgba(94,228,213,0.08), transparent 54%);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  overflow: hidden;
+}
+.mentor-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(
+    135deg,
+    rgba(139,124,255,0.11) 0%,
+    transparent 42%,
+    rgba(94,228,213,0.08) 100%
+  );
+  pointer-events: none;
+}
+.mentor-card > * {
+  position: relative;
+  z-index: 1;
+}
+.mentor-index {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--text-3);
+  letter-spacing: 0.18em;
+  margin-bottom: 30px;
+}
+.mentor-orbit {
+  width: 74px;
+  height: 74px;
+  border: 1px solid rgba(94,228,213,0.26);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  margin-bottom: 24px;
+  background: rgba(94,228,213,0.045);
+  box-shadow: 0 0 32px rgba(94,228,213,0.08);
+}
+.mentor-orbit span {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-family: var(--font-display);
+  font-size: 25px;
+  color: var(--text-0);
+  background: linear-gradient(135deg, var(--accent-violet), var(--accent-cyan));
+}
+.mentor-card h3 {
+  font-family: var(--font-display);
+  font-size: clamp(28px, 3vw, 38px);
+  font-weight: 400;
+  color: var(--text-0);
+  line-height: 1.05;
+  margin-bottom: 14px;
+}
+.mentor-card p {
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--text-1);
+}
+.mentors-note {
+  max-width: 780px;
+  margin: 34px auto 0;
+  font-family: var(--font-display);
+  font-size: clamp(20px, 2.2vw, 28px);
+  line-height: 1.5;
+  color: var(--text-0);
+  text-align: center;
+}
+@media (max-width: 980px) {
+  .mentors-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 560px) {
+  .mentors-grid {
+    grid-template-columns: 1fr;
+  }
+  .mentor-card {
+    min-height: 250px;
+  }
+}
+
 /* ============== ASK OUR SEMESTER ============== */
 .ask { background: var(--bg-0); }
 .ask-bg {
