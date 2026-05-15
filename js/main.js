@@ -96,6 +96,7 @@
     const m = D.members[i];
     const av = document.getElementById("sp-avatar");
     const init = document.getElementById("sp-initials");
+    const photo = document.getElementById("sp-photo");
     const name = document.getElementById("sp-name");
 
     // brief fade transition
@@ -105,6 +106,9 @@
       init.textContent = initialsOf(m);
       // Set a unique gradient per member for the avatar background
       av.style.background = avatarGradient(i);
+      photo.src = m.photo;
+      photo.alt = `${m.name} ${m.nameZH}`;
+      av.classList.add("has-photo");
       name.innerHTML = `${m.name} <span class="zh">${m.nameZH}</span>`;
       document.getElementById("sp-role").textContent = `${m.role} · ${m.company}`;
       document.getElementById("sp-tag").textContent = m.tag;

@@ -75,6 +75,7 @@ window.SITE_DATA = {
     {
       name: "Leo",
       nameZH: "黎想",
+      photo: "images/members/leo.jpg",
       role: "Staff PM, Ads",
       company: "Pinterest",
       tag: "Connector",
@@ -85,6 +86,7 @@ window.SITE_DATA = {
     {
       name: "Iris",
       nameZH: "翟秋晨",
+      photo: "images/members/iris.jpg",
       role: "Engineering Manager",
       company: "Instagram",
       tag: "Leader",
@@ -95,6 +97,7 @@ window.SITE_DATA = {
     {
       name: "Yali",
       nameZH: "万雅莉",
+      photo: "images/members/yali.jpg",
       role: "Principal Applied Scientist",
       company: "Amazon",
       tag: "Builder",
@@ -105,6 +108,7 @@ window.SITE_DATA = {
     {
       name: "Jay",
       nameZH: "欧肖泽",
+      photo: "images/members/jay.jpg",
       role: "Hardware Engineering Lead",
       company: "ByteDance",
       tag: "Explorer",
@@ -115,6 +119,7 @@ window.SITE_DATA = {
     {
       name: "Shanshan",
       nameZH: "倪姗姗",
+      photo: "images/members/shanshan.jpg",
       role: "Staff SWE, Frontend",
       company: "OpenAI",
       tag: "Storyteller",
@@ -125,6 +130,7 @@ window.SITE_DATA = {
     {
       name: "Charlie",
       nameZH: "何唐从睿",
+      photo: "images/members/charlie.jpg",
       role: "Staff SWE",
       company: "Waymo",
       tag: "Explorer",
@@ -135,6 +141,7 @@ window.SITE_DATA = {
     {
       name: "Shiyu",
       nameZH: "黄诗禹",
+      photo: "images/members/shiyu.jpg",
       role: "Staff Research Eng",
       company: "Google DeepMind",
       tag: "Explorer",
@@ -145,6 +152,7 @@ window.SITE_DATA = {
     {
       name: "David",
       nameZH: "陆松",
+      photo: "images/members/david.jpg",
       role: "Staff Research Eng",
       company: "Google",
       tag: "Builder",
@@ -155,6 +163,7 @@ window.SITE_DATA = {
     {
       name: "Henry",
       nameZH: "张浩喆",
+      photo: "images/members/henry.jpg",
       role: "Principal Security Researcher",
       company: "Palo Alto Networks",
       tag: "Leader",
@@ -165,6 +174,7 @@ window.SITE_DATA = {
     {
       name: "Chuan",
       nameZH: "汪川",
+      photo: "images/members/chuan.jpg",
       role: "MTS / EM",
       company: "Apple → Perplexity",
       tag: "Builder",
