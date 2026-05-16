@@ -8,17 +8,6 @@
   "trailingSlash": false,
   "redirects": [
     {
-      "source": "/",
-      "has": [
-        {
-          "type": "host",
-          "value": "linghang-goat.vercel.app"
-        }
-      ],
-      "destination": "https://www.linghang-goat.org/",
-      "permanent": true
-    },
-    {
       "source": "/:path*",
       "has": [
         {
