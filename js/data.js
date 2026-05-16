@@ -253,7 +253,9 @@ window.SITE_DATA = {
 
   closing: {
     titleEN: "The journey continues.",
-    titleZH: "领航不是答案的终点，而是下一段旅程的开始。",
+    titleZH:
+      "我们在浪潮里 不只是在上班；\n一边写代码 一边写着自己的答案；\n从个人品牌 到整支团队的作战；\n一步一步走 不用爆红 要走得很稳很慢",
+    songSrc: "audio/linghang-goat-rap.mp3",
     credit: "Made by 领航十一期 · Team GOAT · 2026",
   },
 };

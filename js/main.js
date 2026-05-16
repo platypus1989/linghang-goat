@@ -276,6 +276,46 @@
     document.getElementById("closing-title").textContent = c.titleEN;
     document.getElementById("closing-zh").textContent = c.titleZH;
     document.getElementById("closing-credit").textContent = c.credit;
+    document.getElementById("closing-rap").src = c.songSrc;
+  }
+
+  // ============ RAP AUDIO ============
+  function initRapAudio() {
+    const trigger = document.getElementById("reflection-title");
+    const audio = document.getElementById("closing-rap");
+    let hasStarted = false;
+    let isTriggerVisible = false;
+
+    const playSong = () => {
+      if (hasStarted) return;
+
+      hasStarted = true;
+      audio.play().catch(() => {
+        hasStarted = false;
+      });
+    };
+
+    const retryWhenVisible = () => {
+      if (!isTriggerVisible) return;
+      playSong();
+    };
+
+    const io = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          isTriggerVisible = entry.isIntersecting;
+          if (entry.isIntersecting) {
+            playSong();
+          }
+        });
+      },
+      { threshold: 0.55 }
+    );
+
+    io.observe(trigger);
+    ["click", "keydown", "touchstart", "wheel"].forEach((eventName) => {
+      window.addEventListener(eventName, retryWhenVisible, { passive: true });
+    });
   }
 
   // ============ Nav scroll state ============
@@ -314,6 +354,7 @@
     renderAsk();
     renderReflection();
     renderClosing();
+    initRapAudio();
     initNav();
     // small defer so journey-step elements exist before observer
     requestAnimationFrame(initFadeIns);
