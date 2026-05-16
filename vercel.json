@@ -5,18 +5,5 @@
   "installCommand": "",
   "outputDirectory": ".",
   "cleanUrls": true,
-  "trailingSlash": false,
-  "redirects": [
-    {
-      "source": "/:path*",
-      "has": [
-        {
-          "type": "host",
-          "value": "linghang-goat.vercel.app"
-        }
-      ],
-      "destination": "https://www.linghang-goat.org/:path*",
-      "permanent": true
-    }
-  ]
+  "trailingSlash": false
 }
