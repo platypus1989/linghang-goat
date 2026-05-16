@@ -146,7 +146,7 @@ window.SITE_DATA = {
       company: "Google DeepMind",
       tag: "Explorer",
       keyword: "Re-calibration",
-      takeaway: "项目像一面镜子，帮我打开了心态，重新校准位置。年中从 Google Search 内部转岗到 DeepMind，做 LLM post-training——我应该更早一点做这个决定。",
+      takeaway: "参加领航像照见了一面镜子，帮我打开了心态，重新校准了自己在行业中的位置，在 AI 快速变化的环境中，让我开始主动打破惯性、拓展对外部变化的认知。",
       next: "Push at the frontier — and bring others along.",
     },
     {
