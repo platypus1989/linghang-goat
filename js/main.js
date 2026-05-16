@@ -222,6 +222,31 @@
     });
   }
 
+  // ============ MENTOR THANKS ============
+  function renderMentors() {
+    const mentors = D.mentors;
+    if (!mentors) return;
+
+    document.getElementById("mentors-title").textContent = mentors.title;
+    document.getElementById("mentors-subtitle").textContent = mentors.subtitle;
+    document.getElementById("mentors-note").textContent = mentors.note;
+
+    const grid = document.getElementById("mentors-grid");
+    grid.innerHTML = mentors.people
+      .map(
+        (person, i) => `
+          <article class="mentor-card fade-in" style="--mentor-i:${i}">
+            <div class="mentor-index">${String(i + 1).padStart(2, "0")}</div>
+            <div class="mentor-orbit" aria-hidden="true">
+              <span>${person.name.slice(0, 1)}</span>
+            </div>
+            <h3>${person.name}</h3>
+            <p>${person.line}</p>
+          </article>`
+      )
+      .join("");
+  }
+
   // ============ REFLECTION ============
   function renderReflection() {
     const r = D.reflection;
@@ -285,6 +310,7 @@
     renderHero();
     renderJourney();
     renderSpotlight();
+    renderMentors();
     renderAsk();
     renderReflection();
     renderClosing();
