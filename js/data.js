@@ -13,7 +13,7 @@ window.SITE_DATA = {
     titleEN: "Navigating the AI Era",
     titleZH: "领航",
     subtitleZH: "在 AI 加速变化的时代，我们一起寻找自己的方向",
-    body: "这一学期，我们聊的不只是 AI。\n我们聊的是：当世界快速变化时，如何继续成长，如何彼此支持，如何找到自己的航向。",
+    body: "这一学期，我们聊的不只是 AI。\n我们聊的是：当世界快速变化，如何继续成长，\n如何彼此支持，如何找到自己的航向。",
     cta: "Start the Journey",
   },
 
@@ -179,7 +179,7 @@ window.SITE_DATA = {
       company: "Apple → Perplexity",
       tag: "Builder",
       keyword: "I'm not alone",
-      takeaway: "在苹果近 7 年后，我加入了 Perplexity 的 Query Understanding 团队——人生第一次进创业公司。AI 焦虑反而在和大家交流后被缓解了——意识到 I am not alone，并发现了很多值得去解决的问题。",
+      takeaway: "在苹果近 7 年后，我加入了 Perplexity AI ——人生第一次进创业公司。被 AI 取代的焦虑反而在和大家交流后被缓解了——意识到 I am not alone，并发现了很多值得去解决的问题。",
       next: "Build at the edge — with people who care about the same questions.",
     },
   ],
@@ -204,31 +204,6 @@ window.SITE_DATA = {
       {
         name: "Kai",
         line: "谢谢你让我们看见利他的力量：真正的影响力，是让别人因为你被托举。",
-      },
-    ],
-  },
-
-  // Ask Our Semester
-  askSemester: {
-    title: "Ask Our Semester",
-    subtitle: "如果把这一学期的讨论变成一个 AI memory，它会怎么回答？",
-    placeholder: "Ask something like: How do we grow in the AI era?",
-    suggestions: [
-      {
-        q: "AI 会取代我们的工作吗？",
-        a: "AI 会改变很多工作的形态，但「执行」被商品化的同时，「判断」「品味」「连接真实世界」的能力在升值。这一学期我们最锋利的一句概括来自 4 月那场圆桌：「AI 在把执行商品化，但判断在升值。」真正被替代的，是那些拒绝重新校准自己定位的人；真正受益的，是把 AI 嵌进真实流程的人。",
-      },
-      {
-        q: "如何在变化中保持竞争力？",
-        a: "我们的共识是：Stay in the market，不是一直面试。每年和 4–5 家公司聊一聊、保持手感、保持人脉、保持对行业的判断。比「被动等到必须跳」时更从容。竞争力不来自一次性的努力，而来自持续保持在场。",
-      },
-      {
-        q: "mentorship 最大的价值是什么？",
-        a: "不是某一句金句、也不是某一次「高人指路」，而是当你迷茫时，有一群同辈愿意把还没答案的问题拿出来一起讨论——「I'm not alone」本身就是力量。导师告诉你梯子在哪里；同辈让你知道这条路有人和你一起爬。",
-      },
-      {
-        q: "这一学期最重要的共同记忆是什么？",
-        a: "不是某一个研讨会，而是那种「组员先讲真实案例、导师再补刀」的节奏——以及聚餐、Hiking、跨组联谊里那些「愿意把还没答案的问题拿出来」的瞬间。深度对话很少发生在会议室，更多发生在山路上、餐桌边。",
       },
     ],
   },

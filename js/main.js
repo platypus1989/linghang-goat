@@ -165,63 +165,6 @@
     }
   }
 
-  // ============ ASK ============
-  function renderAsk() {
-    const a = D.askSemester;
-    document.getElementById("ask-title").textContent = a.title;
-    document.getElementById("ask-subtitle").textContent = a.subtitle;
-    const input = document.getElementById("ask-input");
-    input.setAttribute("placeholder", a.placeholder);
-
-    const wrap = document.getElementById("ask-suggestions");
-    wrap.innerHTML = a.suggestions
-      .map((s, i) => `<button class="ask-chip" data-i="${i}">${s.q}</button>`)
-      .join("");
-
-    const answer = document.getElementById("ask-answer");
-    const answerText = document.getElementById("ask-answer-text");
-
-    wrap.querySelectorAll(".ask-chip").forEach((chip) => {
-      chip.addEventListener("click", () => {
-        const i = parseInt(chip.dataset.i, 10);
-        wrap.querySelectorAll(".ask-chip").forEach((c) => c.classList.remove("active"));
-        chip.classList.add("active");
-        input.value = a.suggestions[i].q;
-        // animate: brief hide, then show
-        if (answer.classList.contains("show")) {
-          answer.classList.remove("show");
-          setTimeout(() => {
-            answerText.textContent = a.suggestions[i].a;
-            answer.classList.add("show");
-          }, 250);
-        } else {
-          answerText.textContent = a.suggestions[i].a;
-          answer.classList.add("show");
-        }
-      });
-    });
-
-    // Enter on input → if matches a suggestion or just show the first one
-    input.addEventListener("keydown", (e) => {
-      if (e.key === "Enter") {
-        e.preventDefault();
-        const v = input.value.trim();
-        // find first chip whose text loosely contains any keyword from input
-        let match = a.suggestions.findIndex((s) => s.q === v);
-        if (match === -1 && v.length > 0) {
-          match = a.suggestions.findIndex((s) =>
-            v
-              .split(/\s+/)
-              .some((tok) => tok.length > 1 && s.q.includes(tok))
-          );
-        }
-        if (match === -1) match = 0;
-        const btn = wrap.querySelector(`.ask-chip[data-i="${match}"]`);
-        if (btn) btn.click();
-      }
-    });
-  }
-
   // ============ MENTOR THANKS ============
   function renderMentors() {
     const mentors = D.mentors;
@@ -351,7 +294,6 @@
     renderJourney();
     renderSpotlight();
     renderMentors();
-    renderAsk();
     renderReflection();
     renderClosing();
     initRapAudio();
